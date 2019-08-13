@@ -24,7 +24,8 @@ const run = async () => {
     params
   });
 
-  const isAvailable = !html.includes("Tyvärr är mobilen du söker");
+  const isAvailable =
+    !html.includes("Tyvärr är mobilen du söker") && html.includes("Rymdgrå");
 
   if (isAvailable) {
     console.log("Your desired phone is available! Go and get it now.", params);
